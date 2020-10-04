@@ -1,11 +1,14 @@
-# Slice the row labels 'Perry' to 'Potter': p_counties
-p_counties = election['Perry': 'Potter']
+# Slice the columns from the starting column to 'Obama': left_columns
+left_columns = election.loc[:,'state':'Obama']
 
-# Print the p_counties DataFrame
-print(p_counties)
+# Print the output of left_columns.head()
+print(left_columns.head())
 
-# Slice the row labels 'Potter' to 'Perry' in reverse order: p_counties_rev
-p_counties_rev = election['Potter': 'Perry': -1]
+# Slice the columns from 'Obama' to 'winner': middle_columns
+middle_columns = election.loc[:, 'Obama': 'winner']
 
-# Print the p_counties_rev DataFrame
-print(p_counties_rev)
+# Print the output of middle_columns.head()
+print(middle_columns.head())
+
+# Slice the columns from 'Romney' to the end: 'right_columns'
+right_columns = election.loc[:, 'Romney': 'voters']
